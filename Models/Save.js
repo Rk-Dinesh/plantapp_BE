@@ -23,6 +23,14 @@ const SaveSchema = new Schema({
         type: String,
         required: true
     },
+    date: {
+        type: String,
+        required: true
+    },
+    time: {
+        type: String,
+        required: true
+    },
 });
 
 const SaveModel = db.model('Save', SaveSchema);

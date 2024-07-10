@@ -2,8 +2,8 @@ const SaveService = require('../Services/SaveService');
 
 exports.registerSave = async (req, res, next) => {
     try {
-        const { user_id, dis_name, desc, solution, img } = req.body;
-        const save = await SaveService.registerSave(user_id, dis_name, desc, solution, img);
+        const { user_id, dis_name, desc, solution, img,date,time } = req.body;
+        const save = await SaveService.registerSave(user_id, dis_name, desc, solution, img,date,time);
         res.status(201).json({ status: true, message: "Save registered successfully", data: save });
     } catch (error) {
         next(error);

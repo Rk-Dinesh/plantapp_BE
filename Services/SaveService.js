@@ -1,9 +1,9 @@
 const SaveModel = require('../Models/Save');
 
 class SaveService {
-    static async registerSave(user_id, dis_name, desc, solution, img) {
+    static async registerSave(user_id, dis_name, desc, solution, img,date,time) {
         try {
-            const newSave = new SaveModel({ user_id, dis_name, desc, solution, img });
+            const newSave = new SaveModel({ user_id, dis_name, desc, solution, img,date,time });
             return await newSave.save();
         } catch (error) {
             throw error;
